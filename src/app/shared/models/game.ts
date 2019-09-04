@@ -3,7 +3,7 @@ import { Background } from './background';
 import { Feature } from './feature';
 import { Icon } from './icon';
 import { Theme } from './theme';
-import { GameType } from './game-type';
+import { GameTypes } from './game-types';
 
 export interface Game {
   categories: string[],
@@ -27,7 +27,7 @@ export interface Game {
   has_age_restriction: 0 | 1,
   icon_2: string,
   background: string,
-  types: GameType,
+  types: GameTypes,
   game_skin_id: string,
   cats: Category[],
   feats: Feature[],
