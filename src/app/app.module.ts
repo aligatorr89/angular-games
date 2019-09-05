@@ -4,12 +4,18 @@ import { AppRouterModule } from './app-router.module';
 
 import { AppComponent } from './app.component';
 import { GamesModule } from './games/games.module';
-import { HomeComponent } from './home.component';
+import { HomePageComponent } from './home-page-components/home-page/home-page.component';
+import { HomePageHeaderComponent } from './home-page-components/home-page-header/home-page-header.component';
+import { HomePageContentComponent } from './home-page-components/home-page-content/home-page-content.component';
+import { HomePageFooterComponent } from './home-page-components/home-page-footer/home-page-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomePageComponent,
+    HomePageHeaderComponent,
+    HomePageContentComponent,
+    HomePageFooterComponent
   ],
   imports: [
     BrowserModule,
