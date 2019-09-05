@@ -1,8 +1,8 @@
 .wrapper {
+  display: inline-block;
   position: relative;
-  width: 100%;
+  text-align: center;
   border: 1px solid #ddd;
-  margin: 2px;
   padding: 4px;
   border-radius: 4px;
 }
@@ -14,11 +14,17 @@
 }
 
 .provider-title {
+  display: none;
   position: absolute;
   top: 8px;
-  left: auto;
-  right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
   font-size: 24px;
   font-family: sans-serifs;
   color: red;
+}
+
+.wrapper:hover .provider-title {
+  display: block;
 }
