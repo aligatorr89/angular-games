@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Game } from '../../shared/models/game';
+import { Game, mockedGames } from '../../shared/models/game';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class GamesService {
 
   getGames() {
     return new Observable<Game[]>(subscriber =>  {
-      subscriber.next(require('../../../../data.json'));
+      subscriber.next(mockedGames);
       subscriber.complete();
     });
   }
