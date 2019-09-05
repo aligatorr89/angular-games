@@ -13,15 +13,12 @@ import { HomeComponent } from './home.component';
   ],
   imports: [
     BrowserModule,
-<<<<<<< HEAD
     GamesModule,
     BrowserModule.withServerTransition({
       appId: 'angular-games'
-    })
-=======
+    }),
     AppRouterModule,
     GamesModule,
->>>>>>> dev1
   ],
   providers: [],
   bootstrap: [AppComponent]
