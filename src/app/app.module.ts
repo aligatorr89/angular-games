@@ -13,6 +13,10 @@ import { HomeComponent } from './home.component';
   ],
   imports: [
     BrowserModule,
+    GamesModule,
+    BrowserModule.withServerTransition({
+      appId: 'angular-games'
+    }),
     AppRouterModule,
     GamesModule,
   ],
