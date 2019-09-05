@@ -10,7 +10,10 @@ import { GamesModule } from './games/games.module';
   ],
   imports: [
     BrowserModule,
-    GamesModule
+    GamesModule,
+    BrowserModule.withServerTransition({
+      appId: 'angular-games'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
