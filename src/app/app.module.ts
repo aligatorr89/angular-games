@@ -4,10 +4,12 @@ import { AppRouterModule } from './app-router.module';
 
 import { AppComponent } from './app.component';
 import { GamesModule } from './games/games.module';
+import { HomeComponent } from './home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
