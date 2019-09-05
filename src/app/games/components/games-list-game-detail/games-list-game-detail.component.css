@@ -1,13 +1,24 @@
 .wrapper {
+  position: relative;
+  width: 100%;
   border: 1px solid #ddd;
   margin: 2px;
   padding: 4px;
   border-radius: 4px;
-  position: relative;
 }
 
 .name {
-  color: grey;
   font-size: 20px;
   font-family: sans-serifs;
+  color: grey;
+}
+
+.provider-title {
+  position: absolute;
+  top: 8px;
+  left: auto;
+  right: auto;
+  font-size: 24px;
+  font-family: sans-serifs;
+  color: red;
 }
