@@ -7,6 +7,9 @@ import { GamesListComponent } from './components/games-list/games-list.component
   declarations: [GamesComponent, GamesListComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    GamesComponent
   ]
 })
 export class GamesModule { }

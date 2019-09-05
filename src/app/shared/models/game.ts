@@ -35,7 +35,7 @@ export interface Game {
   active: '0' | '1'
 }
 
-export const mockedGames = [
+export const mockedGames: Game[] = [
   {
     "categories": [
       "51"
