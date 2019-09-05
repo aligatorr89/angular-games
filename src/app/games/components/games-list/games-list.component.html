@@ -1,6 +1,6 @@
 <p>games-list works!</p>
-<div class="" *ngIf="games">
+<div class="flex" *ngIf="games">
   <div class="" *ngFor="let game of games">
-    {{ game.id }},&nbsp;{{ game.name }}&nbsp;{{ game.title }}
+    <app-games-list-game-detail [game]="game"></app-games-list-game-detail>
   </div>
 </div>

@@ -1,0 +1,13 @@
+.wrapper {
+  border: 1px solid #ddd;
+  margin: 2px;
+  padding: 4px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.name {
+  color: grey;
+  font-size: 20px;
+  font-family: sans-serifs;
+}
