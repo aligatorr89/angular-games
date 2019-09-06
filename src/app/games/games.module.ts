@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { GamesComponent } from './components/games/games.component';
 import { GamesListComponent } from './components/games-list/games-list.component';
 import { GamesListElementComponent } from './components/games-list-element/games-list-element.component';
@@ -8,7 +9,7 @@ import { GamesHeaderComponent } from './components/games-header/games-header.com
 @NgModule({
   declarations: [GamesComponent, GamesListComponent, GamesListElementComponent, GamesHeaderComponent],
   imports: [
-    CommonModule
+    CommonModule, FormsModule
   ],
   exports: [
     GamesComponent

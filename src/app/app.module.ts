@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRouterModule } from './app-router.module';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { GamesModule } from './games/games.module';
@@ -19,6 +20,7 @@ import { HomePageFooterComponent } from './home-page-components/home-page-footer
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     GamesModule,
     BrowserModule.withServerTransition({
       appId: 'angular-games'

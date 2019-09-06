@@ -36,8 +36,6 @@ export interface Game {
   active: '0' | '1'
 }
 
-type q = keyof(Game)
-
 export type GameQuery = {
   [key: string]: any
 };

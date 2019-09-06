@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { GameQuery } from '../../../shared/models/game';
+import { Category, mockedCategories } from '../../../shared/models/category';
 
 @Component({
   selector: 'app-games-header',
@@ -8,15 +9,24 @@ import { GameQuery } from '../../../shared/models/game';
 })
 export class GamesHeaderComponent implements OnInit {
 
+  categories: Category[] = mockedCategories;
+  selectedCategory: Category = mockedCategories[0];
+
   @Output('changeName')
   changeNameEmmiter = new EventEmitter<GameQuery>();
+  @Output('changeCategory')
+  changeCategoryEmmiter = new EventEmitter<Category>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  searchByGameName(target: HTMLInputElement) {
+  searchByName(target: HTMLInputElement) {
     this.changeNameEmmiter.emit({name: target.value});
+  }
+
+  changeCategory() {
+    this.changeCategoryEmmiter.emit(this.selectedCategory);
   }
 }
