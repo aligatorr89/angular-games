@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GamesService } from '../../services/games.service';
 import { Observable } from 'rxjs';
-import { Game } from '../../../shared/models/game';
+import { Game, GameQuery } from '../../../shared/models/game';
 
 @Component({
   selector: 'app-games',
@@ -18,8 +18,8 @@ export class GamesComponent implements OnInit {
     this.getGames();
   }
 
-  getGames() {
-    this.games$ = this.gamesService.getGames();
+  getGames(query?: GameQuery) {
+    this.games$ = this.gamesService.getGames(query);
   }
 
 }
