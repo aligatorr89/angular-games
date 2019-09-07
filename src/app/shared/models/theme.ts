@@ -1,5 +1,5 @@
 export interface Theme {
-  id: number,
+  id: string,
   title: string,
   type: 'theme'
 }

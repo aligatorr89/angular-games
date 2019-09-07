@@ -17,7 +17,9 @@ export interface Game {
   front_game_id: string,
   name: string,
   title: string,
-  ratio: string,
+  width?: string,
+  height?: string,
+  ratio?: string,
   status: string,
   provider: string,
   show_as_provider: string,
@@ -26,8 +28,8 @@ export interface Game {
   blocked_countries: string[],
   has_age_restriction: 0 | 1,
   icon_2: string,
-  icon_3: string,
-  background: string,
+  icon_3?: string,
+  background?: string,
   types: GameTypes,
   game_skin_id: string,
   cats: Category[],
@@ -40,7 +42,7 @@ export type GameQuery = {
   [key: string]: any
 };
 
-export const mockedGames: Game[]|any = [
+export const mockedGames: Game[] = [
     {
       "categories": [
         "51"
