@@ -8,6 +8,7 @@
     "test": "jest --verbose",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "cypress:open": "cypress open",
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
@@ -21,7 +22,8 @@
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules",
       "<rootDir>/dist",
-      "<rootDir>/src/test.ts"
+      "<rootDir>/src/test.ts",
+      "<rootDir>/cypress"
     ],
     "globals": {
       "ts-jest": {
@@ -63,6 +65,7 @@
     "@types/jest": "^24.0.18",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "cypress": "^3.4.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "jest": "^24.9.0",
