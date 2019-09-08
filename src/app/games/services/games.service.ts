@@ -12,7 +12,6 @@ export class GamesService {
 
   getGames(query?: GameQuery) {
     return new Observable<Game[]>(subscriber =>  {
-      console.log(query)
       subscriber.next(GamesSelector.get(mockedGames, query));
       subscriber.complete();
     });

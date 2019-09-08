@@ -1,6 +1,6 @@
 import { Game, mockedGames, GameQuery } from '../../shared/models/game';
 
-export class GamesSelector{
+export class GamesSelector {
   static get(games: Game[], query?: GameQuery, limit: number = 100) {
     if(typeof query === 'object') {
       if(query.name) {
