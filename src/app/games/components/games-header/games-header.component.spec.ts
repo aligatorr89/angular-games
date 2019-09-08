@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { GamesHeaderComponent } from './games-header.component';
 
@@ -8,7 +9,8 @@ describe('GamesHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GamesHeaderComponent ]
+      declarations: [ GamesHeaderComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
