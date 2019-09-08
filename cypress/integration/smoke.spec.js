@@ -1,6 +1,12 @@
 describe('My First Test', function() {
-  it('Visits the Kitchen Sink', function() {
-    cy.visit('http://localhost:4000');
-    cy.contains('games');
-  })
+  it('successfully loads', function() {
+    cy.visit('/');
+    cy.contains('Angular Games');
+  });
+
+  it('visits /games path', function() {
+    cy.visit('/');
+    cy.get('a[routerLink="/games"]').click();
+    cy.url().should('include', '/games');
+  });
 });
