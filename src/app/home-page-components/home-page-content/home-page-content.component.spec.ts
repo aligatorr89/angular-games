@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomePageContentComponent } from './home-page-content.component';
-import { GamesTestingModule } from '../../games/games-testing.module';
+import { GamesModule } from '../../games/games.module';
 
 describe('HomePageContentComponent', () => {
   let component: HomePageContentComponent;
@@ -10,7 +10,7 @@ describe('HomePageContentComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ HomePageContentComponent ],
-      imports: [ GamesTestingModule]
+      imports: [ GamesModule ]
     })
     .compileComponents();
   }));
