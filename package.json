@@ -31,7 +31,10 @@
         "stringifyContentPathRegex": "\\.html$",
         "astTransformers": [
           "<rootDir>/node_modules/jest-preset-angular/InlineHtmlStripStylesTransformer"
-        ]
+        ],
+        "diagnostics": {
+          "pathRegex": "./src\\.(spec)\\.ts$"
+        }
       }
     }
   },
