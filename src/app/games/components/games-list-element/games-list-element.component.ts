@@ -9,7 +9,7 @@ import { Game } from '../../../shared/models/game';
 export class GamesListElementComponent implements OnInit {
 
   @Input()
-  game: Game[];
+  game: Game;
 
   constructor() { }
 

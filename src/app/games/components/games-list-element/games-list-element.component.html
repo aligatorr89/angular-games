@@ -1,13 +1,16 @@
-<div *ngIf="game" class="wrapper">
+<div *ngIf="game" class="wrapper border-success mb-2">
   <div class="image">
     <img bind-src="game.icon_2">
   </div>
-  <div class="name">
+
+  <h5 class="text-dark">
     {{ game.name }}
-  </div>
-  <div class="provider-title">
+  </h5>
+
+  <div class="provider-title text-danger">
     {{ game.provider_title }}
   </div>
+
   <div class="play">
     <button type="button" class="btn btn-lg btn-success">Play</button>
   </div>
