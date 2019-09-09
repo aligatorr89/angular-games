@@ -12,9 +12,9 @@ export class GamesHeaderComponent implements OnInit {
   categories: Category[] = mockedCategories;
   selectedCategory: Category = mockedCategories[0];
 
-  @Output('changeName')
+  @Output()
   changeNameEmmiter = new EventEmitter<GameQuery>();
-  @Output('changeCategory')
+  @Output()
   changeCategoryEmmiter = new EventEmitter<Category>();
 
   constructor() { }

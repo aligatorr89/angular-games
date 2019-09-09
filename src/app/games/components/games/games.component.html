@@ -1,2 +1,2 @@
-<app-games-header (changeName)="getGames($event)" (changeCategory)="getGames($event)"></app-games-header>
+<app-games-header (changeNameEmmiter)="getGames($event)" (changeCategoryEmmiter)="getGames($event)"></app-games-header>
 <app-games-list *ngIf="games$ | async as games" [games]="games"></app-games-list>
