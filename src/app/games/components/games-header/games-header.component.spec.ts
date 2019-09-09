@@ -28,7 +28,7 @@ describe('GamesHeaderComponent', () => {
 
     const input: HTMLInputElement = test.html.querySelector('input[name="search-game"]');
     input.value = 'w';
-    const event = new KeyboardEvent("keyup", {key : "w"});
+    const event = new KeyboardEvent('keyup', {key : 'w'});
     input.dispatchEvent(event);
 
     expect(spy).toHaveBeenCalledTimes(1);
@@ -41,7 +41,7 @@ describe('GamesHeaderComponent', () => {
     const event = new Event('change');
     select.selectedIndex = 3;
     select.dispatchEvent(event);
-    
+
     expect(spy).toHaveBeenCalledTimes(1);
   });
 });
