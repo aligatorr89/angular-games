@@ -27,7 +27,7 @@ describe('HomePageComponent', () => {
   });
 
   it('should have <app-home-page-header> and <app-home-page-content> elements', () => {
-    expect(test.html.outerHTML).toContain('<app-home-page-header>');
-    expect(test.html.outerHTML).toContain('<app-home-page-content>');
+    expect(test.html.innerHTML).toContain('<app-home-page-header>');
+    expect(test.html.innerHTML).toContain('<app-home-page-content>');
   });
 });
