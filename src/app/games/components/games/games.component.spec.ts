@@ -5,10 +5,10 @@ import { GamesComponent } from './games.component';
 import { GamesHeaderComponent } from '../games-header/games-header.component';
 import { GamesListComponent } from '../games-list/games-list.component';
 import { GamesListElementComponent } from '../games-list-element/games-list-element.component';
+import { ComponentTestInit } from '../../../shared/test/test-util';
 
 describe('GamesComponent', () => {
-  let component: GamesComponent;
-  let fixture: ComponentFixture<GamesComponent>;
+  let test: ComponentTestInit<GamesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -19,12 +19,19 @@ describe('GamesComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GamesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    test = new ComponentTestInit(GamesComponent);
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(test.component).toBeTruthy();
+  });
+
+  it('should contain <app-games-header and <app-games-list innerHTML', () => {
+    expect(test.html.innerHTML).toContain('<app-games-header');
+    expect(test.html.innerHTML).toContain('<app-games-list');
+  });
+
+  it('should have attribute ng-reflect-games=[ in innerHTML', () => {
+    expect(test.html.innerHTML).toContain('ng-reflect-games=');
   });
 });

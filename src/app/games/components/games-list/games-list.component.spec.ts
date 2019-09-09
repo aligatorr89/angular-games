@@ -2,10 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GamesListComponent } from './games-list.component';
 import { GamesListElementComponent } from '../games-list-element/games-list-element.component';
+import { ComponentTestInit } from '../../../shared/test/test-util';
 
 describe('GamesListComponent', () => {
-  let component: GamesListComponent;
-  let fixture: ComponentFixture<GamesListComponent>;
+  let test: ComponentTestInit<GamesListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -15,12 +15,16 @@ describe('GamesListComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GamesListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    test = new ComponentTestInit(GamesListComponent);
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(test.component).toBeTruthy();
+  });
+
+  it('should have <app-games-list-element innnerHTML', () => {
+    setTimeout(() => {
+      expect(test.html.innerHTML).toContain('<app-games-list-element');
+    }, 0);
   });
 });

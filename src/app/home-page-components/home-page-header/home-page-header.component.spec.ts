@@ -2,10 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomePageHeaderComponent } from './home-page-header.component';
 import { GamesModule } from '../../games/games.module';
+import { ComponentTestInit } from '../../shared/test/test-util';
 
 describe('HomePageHeaderComponent', () => {
-  let component: HomePageHeaderComponent;
-  let fixture: ComponentFixture<HomePageHeaderComponent>;
+  let test: ComponentTestInit<HomePageHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -16,12 +16,15 @@ describe('HomePageHeaderComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomePageHeaderComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    test = new ComponentTestInit(HomePageHeaderComponent);
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(test.component).toBeTruthy();
   });
+
+  it('should match snapshot', () => {
+    expect(test.html.outerHTML).toMatchSnapshot();
+  });
+
 });

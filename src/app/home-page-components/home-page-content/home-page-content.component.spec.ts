@@ -2,10 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomePageContentComponent } from './home-page-content.component';
 import { GamesModule } from '../../games/games.module';
+import { ComponentTestInit } from '../../shared/test/test-util';
 
 describe('HomePageContentComponent', () => {
-  let component: HomePageContentComponent;
-  let fixture: ComponentFixture<HomePageContentComponent>;
+  let test: ComponentTestInit<HomePageContentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -16,12 +16,14 @@ describe('HomePageContentComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomePageContentComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    test = new ComponentTestInit(HomePageContentComponent);
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(test.component).toBeTruthy();
+  });
+
+  it('should have <app-games> element', () => {
+    expect(test.html.outerHTML).toContain('<app-games>');
   });
 });

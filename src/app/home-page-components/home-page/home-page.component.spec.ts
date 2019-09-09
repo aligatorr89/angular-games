@@ -5,10 +5,10 @@ import { HomePageHeaderComponent } from '../home-page-header/home-page-header.co
 import { HomePageContentComponent } from '../home-page-content/home-page-content.component';
 import { HomePageFooterComponent } from '../home-page-footer/home-page-footer.component';
 import { GamesModule } from '../../games/games.module';
+import { ComponentTestInit } from '../../shared/test/test-util';
 
 describe('HomePageComponent', () => {
-  let component: HomePageComponent;
-  let fixture: ComponentFixture<HomePageComponent>;
+  let test: ComponentTestInit<HomePageHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -19,12 +19,15 @@ describe('HomePageComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomePageComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    test = new ComponentTestInit(HomePageComponent);
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(test.component).toBeTruthy();
+  });
+
+  it('should have <app-home-page-header> and <app-home-page-content> elements', () => {
+    expect(test.html.outerHTML).toContain('<app-home-page-header>');
+    expect(test.html.outerHTML).toContain('<app-home-page-content>');
   });
 });
