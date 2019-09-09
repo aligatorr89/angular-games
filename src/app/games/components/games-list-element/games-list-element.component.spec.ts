@@ -21,9 +21,9 @@ describe('GamesListElementComponent', () => {
     expect(test.component).toBeTruthy();
   });
 
-  it('should have an <img bind-src="game.icon_2" innerHTML', () => {
+  it('should have an <img bind-src="game.icon_2"> innerHTML', () => {
     setTimeout(() => {
-      expect(test.html.innerHTML).toContain('<img bind-src="game.icon_2"');
+      expect(test.html.querySelector('img[bind-src="game.icon_2"]')).toBeTruthy();
     }, 0);
   });
 });

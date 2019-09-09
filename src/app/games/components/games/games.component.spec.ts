@@ -26,12 +26,12 @@ describe('GamesComponent', () => {
     expect(test.component).toBeTruthy();
   });
 
-  it('should contain <app-games-header and <app-games-list innerHTML', () => {
-    expect(test.html.innerHTML).toContain('<app-games-header');
-    expect(test.html.innerHTML).toContain('<app-games-list');
+  it('should contain <app-games-header> and <app-games-list> innerHTML', () => {
+    expect(test.html.querySelector('app-games-header')).toBeTruthy();
+    expect(test.html.querySelector('app-games-list')).toBeTruthy();
   });
 
-  it('should have attribute ng-reflect-games=[ in innerHTML', () => {
-    expect(test.html.innerHTML).toContain('ng-reflect-games=');
+  it('should have attribute ng-reflect-games in innerHTML', () => {
+    expect(test.html.querySelector('[ng-reflect-games]')).toBeTruthy();
   });
 });

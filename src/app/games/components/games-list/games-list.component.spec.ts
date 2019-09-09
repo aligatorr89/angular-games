@@ -22,9 +22,9 @@ describe('GamesListComponent', () => {
     expect(test.component).toBeTruthy();
   });
 
-  it('should have <app-games-list-element innnerHTML', () => {
+  it('should have <app-games-list-element> innnerHTML', () => {
     setTimeout(() => {
-      expect(test.html.innerHTML).toContain('<app-games-list-element');
+      expect(test.html.querySelector('app-games-list-element')).toBeTruthy();
     }, 0);
   });
 });

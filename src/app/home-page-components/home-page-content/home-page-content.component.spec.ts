@@ -24,6 +24,6 @@ describe('HomePageContentComponent', () => {
   });
 
   it('should have <app-games> element', () => {
-    expect(test.html.innerHTML).toContain('<app-games>');
+    expect(test.html.querySelector('app-games')).toBeTruthy();
   });
 });
